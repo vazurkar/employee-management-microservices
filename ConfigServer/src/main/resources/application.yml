@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/vazurkar/ConfigServer.git
+          clone-on-start: true
