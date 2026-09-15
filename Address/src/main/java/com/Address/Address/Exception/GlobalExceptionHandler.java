@@ -25,4 +25,10 @@ public class GlobalExceptionHandler {
         ErrorResponse reponse = new ErrorResponse(ex.getMessage(),ex.getStatus());
         return new ResponseEntity<>(reponse, ex.getStatus());
     }
+
+    @ExceptionHandler(ServiceNotAvailableException.class)
+    public ResponseEntity<ErrorResponse> handleServiceNotAvailableException(ServiceNotAvailableException ex){
+        ErrorResponse reponse = new ErrorResponse(ex.getMessage(),ex.getStatus());
+        return new ResponseEntity<>(reponse, ex.getStatus());
+    }
 }
